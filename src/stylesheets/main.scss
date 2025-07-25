@@ -1,3 +1,506 @@
 /* Your styles go here */
 @import "bootstrap/scss/bootstrap.scss";
-@import "bootstrap-icons/font/bootstrap-icons.css";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css");
+
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=Lato:wght@400;700&display=swap");
+
+/* --- Custom Variables (Colors & Fonts) --- */
+:root {
+  // Colors based on logo/hero image
+  --primary-red: #c82b2b;
+  --secondary-blue: #2a5a88;
+  --dark-background: #1a1a1a;
+  --light-background: #f0f0f0;
+  --brown-accent: #5d4037;
+  --text-dark: #333333;
+  --text-light: #eeeeee;
+  --border-light: #e0e0e0;
+  --out-of-stock-grey: #888888;
+
+  // Fonts
+  --font-heading: "Exo 2", sans-serif;
+  --font-body: "Lato", sans-serif;
+}
+
+/* Reset / Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--light-background);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+/* Header / Navigation Bar */
+header {
+  background-color: var(--dark-background);
+  color: var(--text-light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+  a {
+    color: var(--text-light);
+    font-weight: 500;
+
+    &:hover {
+      color: var(--primary-red);
+      text-decoration: none;
+    }
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: var(--text-light);
+    &:hover {
+      color: var(--primary-red);
+    }
+    &.active {
+      color: var(--primary-red);
+      font-weight: 700;
+    }
+  }
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba(42, 90, 136, 0.5);
+    }
+  }
+}
+
+.navbar-brand .logo {
+  height: 35px;
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Hero Section */
+.hero {
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+}
+
+.hero-text {
+  background-color: var(--dark-background);
+  color: var(--text-light);
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  border-bottom: 5px solid var(--primary-red);
+
+  h1 {
+    font-size: 3rem;
+    color: var(--text-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .lead {
+    color: var(--text-light);
+    font-size: 1.25rem;
+  }
+
+  // Primary button styling
+  .btn-primary {
+    background-color: var(--primary-red);
+    border-color: var(--primary-red);
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: darken(#c82b2b, 10%);
+      border-color: darken(#c82b2b, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+/* Shop by Category Section */
+
+section.py-5.bg-light {
+  background-color: var(--light-background) !important;
+}
+
+.mb-4 {
+  color: var(--brown-accent);
+  font-size: 2.25rem;
+}
+
+.card {
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-img-top {
+    height: 300px;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-background);
+    min-height: 2.6rem;
+  }
+
+  .btn-outline-primary {
+    color: var(--primary-red);
+    border-color: var(--primary-red);
+    &:hover {
+      background-color: var(--primary-red);
+      color: var(--text-light);
+      border-color: var(--primary-red);
+    }
+  }
+}
+
+/* --- Products Page Specific Styling --- */
+
+/* Products Page Heading Section */
+.products-hero-section {
+  background-color: #ffffff;
+  border-bottom: 3px solid var(--border-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+
+  h2 {
+    color: var(--primary-red);
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p.lead {
+    color: var(--text-dark);
+    font-size: 1.3rem;
+  }
+}
+
+/* --- About Page Specific Styling --- */
+
+/* About Page Heading Section */
+.about-hero-section {
+  background-color: #ffffff;
+  border-bottom: 3px solid var(--border-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+
+  h2 {
+    color: var(--primary-red);
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p.lead {
+    color: var(--text-dark);
+    font-size: 1.3rem;
+  }
+}
+
+/* --- Contact Page Specific Styling --- */
+
+/* Contact Page Heading Section */
+.contact-hero-section {
+  background-color: #ffffff;
+  border-bottom: 3px solid var(--border-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+
+  h2 {
+    color: var(--primary-red);
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p.lead {
+    color: var(--text-dark);
+    font-size: 1.3rem;
+  }
+}
+
+/* Contact Page General Styling (Form, Info, Map) */
+.contact-form-section {
+  background-color: #ffffff;
+  padding: 3rem 0;
+
+  .form-label {
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  .form-control {
+    border-color: var(--border-light);
+    &:focus {
+      border-color: var(--secondary-blue);
+      box-shadow: 0 0 0 0.25rem rgba(42, 90, 136, 0.25);
+    }
+  }
+
+  h4,
+  h5 {
+    color: var(--dark-background);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: var(--text-dark);
+  }
+
+  // Icons for contact info
+  .bi-envelope-fill,
+  .bi-geo-alt-fill,
+  .bi-phone-fill {
+    color: var(--primary-red);
+    font-size: 1.25rem;
+  }
+
+  // Social media icons
+  .social-icons a {
+    color: var(--secondary-blue) !important;
+    transition: color 0.3s ease;
+    &:hover {
+      color: var(--primary-red) !important;
+    }
+  }
+
+  // Map iframe container
+  .map-container {
+    border: 1px solid var(--border-light);
+    border-radius: 0.375rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    iframe {
+      border: none;
+    }
+  }
+}
+
+.products {
+  background-color: var(--light-background);
+}
+
+.products h2 {
+  color: var(--dark-background);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.products .lead {
+  color: var(--text-dark);
+  margin-bottom: 2.5rem;
+}
+
+.product-card-body {
+  .price-display {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+    margin-top: auto;
+  }
+
+  .form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+  }
+
+  .quantity-input-number,
+  .product-option {
+    width: 100%;
+    max-width: 100px;
+    display: inline-block;
+    margin-bottom: 1rem;
+    border-color: var(--border-light);
+  }
+
+  .add-to-cart-button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  // Styles for out-of-stock product cards
+  &.out-of-stock {
+    background-color: var(--light-background);
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: not-allowed;
+
+    .card-img-top {
+      filter: grayscale(100%);
+      opacity: 0.6;
+    }
+
+    .card-title,
+    .price-display,
+    .form-label {
+      color: var(--out-of-stock-grey);
+    }
+
+    .quantity-input-number,
+    .product-option {
+      background-color: #e9ecef;
+      border-color: #ced4da;
+      cursor: not-allowed;
+      &:focus {
+        box-shadow: none;
+        border-color: #ced4da;
+      }
+    }
+  }
+}
+
+// Styles for disabled primary buttons (used for out-of-stock)
+.btn-primary.add-to-cart-button[disabled] {
+  background-color: var(--out-of-stock-grey);
+  border-color: var(--out-of-stock-grey);
+  color: var(--text-light);
+  cursor: not-allowed;
+  opacity: 0.9;
+  text-decoration: line-through;
+  &:hover {
+    background-color: var(--out-of-stock-grey);
+    border-color: var(--out-of-stock-grey);
+    transform: none;
+    box-shadow: none;
+  }
+  &:active {
+    background-color: var(--out-of-stock-grey);
+    border-color: var(--out-of-stock-grey);
+  }
+}
+
+/* Who We Are Section (About Us) */
+section.py-5.text-center:not(.hero-text) {
+  background-color: var(--brown-accent);
+  color: var(--text-light);
+  h2 {
+    color: var(--text-light);
+    font-size: 2.5rem;
+  }
+  .lead {
+    color: var(--text-light);
+  }
+
+  .btn-secondary {
+    background-color: var(--secondary-blue);
+    border-color: var(--secondary-blue);
+    color: var(--text-light);
+    font-weight: 600;
+    &:hover {
+      background-color: darken(#2a5a88, 10%);
+      border-color: darken(#2a5a88, 10%);
+    }
+  }
+}
+
+/* Testimonials Section */
+section.bg-light.py-5 {
+  background-color: var(--light-background) !important;
+}
+
+.testimonials h2 {
+  color: var(--dark-background);
+}
+
+.blockquote {
+  border-left: 5px solid var(--primary-red);
+  padding-left: 1rem;
+  background-color: #fff;
+  color: var(--text-dark);
+  border-radius: 0.375rem;
+}
+
+.blockquote-footer {
+  color: #777;
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-background);
+  color: var(--text-light);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+
+  a {
+    color: var(--text-light);
+    &:hover {
+      color: var(--primary-red);
+    }
+  }
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--primary-red);
+  --bs-btn-border-color: var(--primary-red);
+  --bs-btn-hover-bg: #c82b2b;
+  --bs-btn-hover-border-color: #c82b2b;
+  --bs-btn-active-bg: darken(#c82b2b, 15%);
+  --bs-btn-active-border-color: darken(#c82b2b, 15%);
+  --bs-btn-focus-shadow-rgb: 200, 43, 43;
+}
+
+.btn-secondary {
+  --bs-btn-bg: var(--primary-red);
+  --bs-btn-border-color: var(--primary-red);
+  --bs-btn-hover-bg: #c82b2b;
+  --bs-btn-hover-border-color: #c82b2b;
+  --bs-btn-active-bg: darken(#c82b2b, 15%);
+  --bs-btn-active-border-color: darken(#c82b2b, 15%);
+  --bs-btn-focus-shadow-rgb: 200, 43, 43;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--primary-red);
+  --bs-btn-border-color: var(--primary-red);
+  --bs-btn-hover-bg: var(--primary-red);
+  --bs-btn-hover-color: var(--text-light);
+  --bs-btn-active-bg: var(--primary-red);
+  --bs-btn-active-color: var(--text-light);
+  --bs-btn-focus-shadow-rgb: 200, 43, 43;
+}
+
+p {
+  color: var(--text-dark);
+}

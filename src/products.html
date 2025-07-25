@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Underworld TCG & Collectibles | Products</title>
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  </head>
+  <body>
+    <header class="bg-dark text-white py-3">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/Luislink-gaming_Logo.png" class="logo" alt="Luis Link Gaming Logo" />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="products.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="bi bi-cart-fill"></i>
+                  Cart <span class="badge bg-danger" id="cart-count">0</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="products-hero-section py-5 text-center">
+      <div class="container">
+        <h2 class="display-5">Our Products</h2>
+        <p class="lead">Browse our collection of trading cards, packs, and bundles.</p>
+      </div>
+    </section>
+
+    <section class="products py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="assets/images/jafar_trove.jpeg" class="card-img-top" alt="Jafar Trove" />
+              <div class="card-body product-card-body">
+                <h5 class="card-title">Disney Lorcana: Reign of Jafar Illumineer's Trove</h5>
+                <p class="card-text price-display">$50.00</p>
+                <div class="mb-3">
+                  <label for="quantityInput1" class="form-label">Quantity:</label>
+                  <input
+                    type="number"
+                    class="form-control quantity-input-number"
+                    id="quantityInput1"
+                    value="1"
+                    min="1"
+                    max="5"
+                  />
+                </div>
+                <button class="btn btn-primary add-to-cart-button">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="assets/images/jafar_booster.jpeg" class="card-img-top" alt="Jafar Booster" />
+              <div class="card-body product-card-body">
+                <h5 class="card-title">Disney Lorcana: Reign of Jafar Booster Box</h5>
+                <div class="mb-3">
+                  <label for="productOption2" class="form-label visually-hidden">Select Option</label>
+                  <select class="form-select product-option" id="productOption2">
+                    <option value="boosterBox" data-price="117.00">Booster Box ($117.00)</option>
+                    <option value="boosterCase" data-price="440.00">Booster Case ($440.00)</option>
+                  </select>
+                </div>
+                <p class="card-text price-display">$117.00</p>
+                <div class="mb-3">
+                  <label for="quantityInput2" class="form-label">Quantity:</label>
+                  <input
+                    type="number"
+                    class="form-control quantity-input-number"
+                    id="quantityInput2"
+                    value="1"
+                    min="1"
+                    max="5"
+                  />
+                </div>
+                <button class="btn btn-primary add-to-cart-button">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="assets/images/jafar_quest.jpeg" class="card-img-top" alt="Jafar Quest" />
+              <div class="card-body product-card-body">
+                <h5 class="card-title">Disney Lorcana: Reign of Jafar Illumineer's Quest</h5>
+                <p class="card-text price-display">$60.00</p>
+                <div class="mb-3">
+                  <label for="quantityInput3" class="form-label">Quantity:</label>
+                  <input
+                    type="number"
+                    class="form-control quantity-input-number"
+                    id="quantityInput3"
+                    value="1"
+                    min="1"
+                    max="5"
+                  />
+                </div>
+                <button class="btn btn-primary add-to-cart-button">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="assets/images/union_strike.avif" class="card-img-top" alt="Union Strike Rebellion Booster" />
+              <div class="card-body product-card-body out-of-stock">
+                <h5 class="card-title">Union Arena: Demon Slayer: Kimetsu no Yaiba Booster</h5>
+                <p class="card-text price-display">$68.00</p>
+                <div class="mb-3">
+                  <label for="quantityInput4" class="form-label">Quantity:</label>
+                  <input
+                    type="number"
+                    class="form-control quantity-input-number"
+                    id="quantityInput4"
+                    value="0"
+                    min="0"
+                    max="0"
+                    disabled
+                  />
+                </div>
+                <button class="btn btn-primary add-to-cart-button" disabled>Out of Stock</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="assets/images/union_arena_2.avif" class="card-img-top" alt="Union Strike Rebellion Booster" />
+              <div class="card-body product-card-body out-of-stock">
+                <h5 class="card-title">Union Arena: CODE GEASS: Lelouch of the Rebellion Booster Display</h5>
+                <p class="card-text price-display">$68.00</p>
+                <div class="mb-3">
+                  <label for="quantityInput5" class="form-label">Quantity:</label>
+                  <input
+                    type="number"
+                    class="form-control quantity-input-number"
+                    id="quantityInput5"
+                    value="0"
+                    min="0"
+                    max="0"
+                    disabled
+                  />
+                </div>
+                <button class="btn btn-primary add-to-cart-button" disabled>Out of Stock</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="assets/images/union_arena_3.avif" class="card-img-top" alt="Union Arena Rebellion Booster" />
+              <div class="card-body product-card-body">
+                <h5 class="card-title">Union Arena: CODE GEASS: Lelouch of the Rebellion Booster Display</h5>
+                <p class="card-text price-display">$12.00</p>
+                <div class="mb-3">
+                  <label for="quantityInput6" class="form-label">Quantity:</label>
+                  <input
+                    type="number"
+                    class="form-control quantity-input-number"
+                    id="quantityInput6"
+                    value="1"
+                    min="1"
+                    max="5"
+                  />
+                </div>
+                <button class="btn btn-primary add-to-cart-button">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="assets/images/fusion_strike.jpg" class="card-img-top" alt="Pokemon Fusion Strike" />
+              <div class="card-body product-card-body out-of-stock">
+                <h5 class="card-title">Pokemon Fusion Strike Booster Case</h5>
+                <p class="card-text price-display">$1575.00</p>
+                <div class="mb-3">
+                  <label for="quantityInput7" class="form-label">Quantity:</label>
+                  <input
+                    type="number"
+                    class="form-control quantity-input-number"
+                    id="quantityInput7"
+                    value="0"
+                    min="0"
+                    max="0"
+                    disabled
+                  />
+                </div>
+                <button class="btn btn-primary add-to-cart-button" disabled>Out of Stock</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="assets/images/pokemon_violet_scarlet_booster.jpg"
+                class="card-img-top"
+                alt="Pokemon Violet & Scarlet Booster"
+              />
+              <div class="card-body product-card-body out-of-stock">
+                <h5 class="card-title">Pokemon Violet and Scarlet Booster Box English</h5>
+                <p class="card-text price-display">$105.00</p>
+                <div class="mb-3">
+                  <label for="quantityInput8" class="form-label">Quantity:</label>
+                  <input
+                    type="number"
+                    class="form-control quantity-input-number"
+                    id="quantityInput8"
+                    value="0"
+                    min="0"
+                    max="0"
+                    disabled
+                  />
+                </div>
+                <button class="btn btn-primary add-to-cart-button" disabled>Out of Stock</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="assets/images/pokemon_unified_minds_booster.jpeg"
+                class="card-img-top"
+                alt="Pokemon Unified Minds Booster"
+              />
+              <div class="card-body product-card-body out-of-stock">
+                <h5 class="card-title">Pokemon Unified Minds Booster Box</h5>
+                <p class="card-text price-display">$600.00</p>
+                <div class="mb-3">
+                  <label for="quantityInput9" class="form-label">Quantity:</label>
+                  <input
+                    type="number"
+                    class="form-control quantity-input-number"
+                    id="quantityInput9"
+                    value="0"
+                    min="0"
+                    max="0"
+                    disabled
+                  />
+                </div>
+                <button class="btn btn-primary add-to-cart-button" disabled>Out of Stock</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-1">© 2025 Luis Link Gaming. All rights reserved.</p>
+        <p class="mb-0">
+          <a href="https://instagram.com" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+          <a href="https://facebook.com" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+          <a href="mailto:info@luislinkgaming.com" class="text-white"><i class="bi bi-envelope"></i></a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="javascripts/main.js"></script>
+  </body>
+</html>

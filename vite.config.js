@@ -1,4 +1,3 @@
-
 const path = require("path")
 const glob = require("glob")
 
@@ -23,7 +22,10 @@ export default defineConfig({
     outDir: "../dist",
     emptyOutDir: true,
     rollupOptions: {
-      input
+      input,
+      output: {
+        assetFileNames: "assets/[name].[hash:8][extname]",
+      },
     },
   },
   server: {
